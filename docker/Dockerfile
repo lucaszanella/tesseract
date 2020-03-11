@@ -30,11 +30,9 @@ RUN apt-get update && apt-get install --no-install-recommends \
   $PKG_ARCH-libwebp $PKG_ARCH-openjpeg2 $PKG_ARCH-tiff \
   $PKG_ARCH-pango1.0 $PKG_ARCH-icu
 
-for dll in $DLLS; do
-  ln -sf /usr/lib/gcc/$HOST/*-posix/$dll dll/$HOST
-done
+RUN for dll in $DLLS; do ln -sf /usr/lib/gcc/$HOST/*-posix/$dll dll/$HOST; done
 
-file dll/$HOST/*
+RUN file dll/$HOST/*
 
 ARG TAG=5.0.0-alpha.$(date +%Y%m%d)
 
