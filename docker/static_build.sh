@@ -10,4 +10,4 @@ ls
 mkdir -p /home/install_prefix
 
 make prefix=/home/install_prefix
-make install
+#make install

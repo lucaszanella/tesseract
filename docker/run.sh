@@ -1,2 +1,2 @@
 #sudo docker run -it -v $PWD/../:/home/project tesseract_builder /bin/bash
-sudo docker run -it tesseract_builder /bin/bash docker/static_build.sh
+sudo docker run -it -v $PWD/build:/home/build tesseract_builder /bin/bash ./docker/static_build.sh
