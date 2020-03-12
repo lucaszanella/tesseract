@@ -6,6 +6,7 @@ cd ..
   CXX=$HOST-g++-posix \
   CXXFLAGS="-fno-math-errno -Wall -Wextra -Wpedantic -g -O2"
 
-mkdir install_prefix
+mkdir -p /home/install_prefix
 
 make prefix=/home/install_prefix
+make install
