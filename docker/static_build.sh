@@ -1,5 +1,6 @@
 #--disable-shared
-cd ..
+cd /home/project
+ls
 ./autogen.sh
 ./configure --disable-openmp --enable-static LDFLAGS='-static -static-libgcc -static-libstdc++'\
   --host=$HOST --prefix=/usr/$HOST \
